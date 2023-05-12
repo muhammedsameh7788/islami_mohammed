@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             elevation: 24,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-            margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 48),
+            margin: const EdgeInsets.fromLTRB(12, 48, 12, 12),
           ),
           cardColor: Colors.white,
           scaffoldBackgroundColor: Colors.transparent,
