@@ -123,14 +123,17 @@ class QoraanTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image(image: AssetImage('assets/images/qouraan_header_logo.png')),
+        Expanded(
+            flex: 1,
+            child: const Image(
+                image: AssetImage('assets/images/qouraan_header_logo.png'))),
         Container(
           width: double.infinity,
           height: 3,
           color: Theme.of(context).primaryColor,
           margin: EdgeInsets.only(bottom: 4),
         ),
-        Text(
+        const Text(
           "Soura name",
           style: TextStyle(
             fontSize: 24,
@@ -143,20 +146,21 @@ class QoraanTab extends StatelessWidget {
           margin: EdgeInsets.only(bottom: 4),
         ),
         Expanded(
+            flex: 3,
             child: ListView.separated(
-          itemBuilder: (buildContext, index) {
-            return SouraNameWidget(souraNames[index], index);
-          },
-          itemCount: souraNames.length,
-          separatorBuilder: (buildContext, index) {
-            return Container(
-              width: double.infinity,
-              height: 2,
-              color: Theme.of(context).primaryColor,
-              margin: EdgeInsets.symmetric(horizontal: 20),
-            );
-          },
-        ))
+              itemBuilder: (buildContext, index) {
+                return SouraNameWidget(souraNames[index], index);
+              },
+              itemCount: souraNames.length,
+              separatorBuilder: (buildContext, index) {
+                return Container(
+                  width: double.infinity,
+                  height: 2,
+                  color: Theme.of(context).primaryColor,
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                );
+              },
+            ))
       ],
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_hamo/home_sceern.dart';
 import 'package:islami_hamo/splash_screen.dart';
+import 'package:islami_hamo/ui/hadeath/hadeth_details_screen.dart';
 import 'package:islami_hamo/ui/soura_detailes/soura_details_screen.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         SouraDetailsScreen.routeName: (_) => SouraDetailsScreen(),
         HomeScreen.routeName: (_) => HomeScreen(),
         SplashScreen.routeName: (_) => SplashScreen(),
+        HadehtDetailsScreen.routeName: (_) => HadehtDetailsScreen(),
       },
       theme: ThemeData(
           cardTheme: CardTheme(
